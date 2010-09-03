@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<title>Documentation | Puppet Labs - The Puppet File Server</title>
+  	<meta name="description" content="The open source leader in data center automation">
+  	<link rel="alternate" type="text/xml" title="Puppet Labs RSS 0.92 Feed" href="http://puppetlabs.com/feed/rss/">
+  	<link rel="alternate" type="application/atom+xml" title="Puppet Labs Atom Feed" href="http://puppetlabs.com/feed/atom/">
+  	<link rel="alternate" type="application/rss+xml" title="Puppet Labs RSS 2.0 Feed" href="http://puppetlabs.com/feed/">
+  	<link rel="pingback" href="http://puppetlabs.com/xmlrpc.php">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://puppetlabs.com/xmlrpc.php?rsd" />
+    <link rel='index' title='Puppet Labs' href='http://docs.puppetlabs.com' />
+
+<!-- Google stats -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1537572-5");
+pageTracker._setDomainName(".puppetlabs.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- End Google stats -->
+
+
+    <!-- FIXME: absolute paths -->
+
+    <script type='text/javascript' src='/files/javascripts/html5.js'></script>
+    <script type='text/javascript' src='/files/javascripts/jquery-1.3.2.min.js'></script>
+    <script type='text/javascript' src='/files/javascripts/drop_down.js'></script>
+    <script type='text/javascript' src='/files/javascripts/cufon-yui.js'></script>
+    <script type='text/javascript' src='/files/fonts/Klavika_400-Klavika_600.font.js'></script>
+    <script type='text/javascript' src='/files/javascripts/ampersands.js'></script>
+
+    <!-- All in One SEO Pack 1.6.10.1 by Michael Torbert of Semper Fi Web Design[127,146] -->
+    <meta name="keywords" content="Puppet, puppet labs, reductive labs, open source, system administrator, ruby, data center, automation, support" />
+    <link rel="canonical" href="http://docs.puppetlabs.com" />
+    <!-- /all in one seo pack -->
+	
+    <!-- FIXME: absolute paths -->
+
+    <link rel="stylesheet" type="text/css" href="/files/stylesheets/style.css" media="screen"> <!-- index -->
+
+    <!--[if IE 7]>
+	  <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_7.css" media="screen"> <!-- index -->
+    <![endif]-->
+  
+    <!--[if IE 8]>
+	    <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_8.css" media="screen"> <!-- index -->
+    <![endif]-->		
+
+  	<script type="text/javascript">
+      Cufon.replace('h1, h2', { fontWeight: '600' });
+  	</script>
+</head>
+
+
+
+        
+  <body id="resources" class="docs">
+  <style type="text/css">h1, h2{ visibility : hidden }</style>		
+  <!--[if IE 8]>
+    <style type="text/css">h1, h2{ visibility : visible }</style>
+  <![endif]-->		
+
+  	<header id="header">
+      <div class="site-width">
+    		<h1><a href="http://puppetlabs.com/"><span>Puppet Labs</span></a></h1>
+        <a class="screen-reader-content" href="#content">Skip navigation</a>
+        <nav>
+      		<ul id="global-navigation">
+            <li id="puppet-tab" class="with-submenu">
+
+              <a href="http://puppetlabs.com/puppet/">
+                <span>Puppet</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>            
+                <li>
+                  <ul>
+                    <li class="page_item page-item-757"><a href="http://puppetlabs.com/puppet/introduction/" title="Introduction">Introduction</a></li>
+                    <li class="page_item page-item-769"><a href="http://puppetlabs.com/puppet/requirements/" title="Requirements">Requirements</a></li>
+                    <li class="page_item page-item-828"><a href="http://puppetlabs.com/puppet/features/" title="Features">Features</a></li>
+                    <li class="page_item page-item-956"><a href="http://puppetlabs.com/puppet/solutions/" title="Solutions">Solutions</a></li>
+                    <li class="page_item page-item-1159"><a href="http://puppetlabs.com/puppet/users/" title="Users">Users</a></li>
+                    <li class="page_item page-item-1074"><a href="http://puppetlabs.com/resources/white-papers" title="White Papers">White Papers</a></li>
+                    <li class="page_item page-item-1495"><a href="http://puppetlabs.com/resources/case-studies" title="Case Studies">Case Studies</a></li>
+                    <li class="page_item page-item-1044"><a href="http://puppetlabs.com/resources/downloads" title="Downloads">Downloads</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li class="page_item page-item-751"><a href="http://puppetlabs.com/puppet/related-projects/dashboard/" title="Dashboard">Dashboard</a></li>
+                    <li class="page_item page-item-753"><a href="http://puppetlabs.com/puppet/related-projects/facter/" title="Facter">Facter</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="services-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/services/">
+                <span>Services</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-783"><a href="http://puppetlabs.com/services/overview/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-839"><a href="http://puppetlabs.com/services/support/" title="Enterprise Support">Enterprise Support</a></li>
+                <li class="page_item page-item-845"><a href="http://puppetlabs.com/services/training-workshops/" title="On-Site Training &amp; Consulting">On-Site Training &amp; Consulting</a></li>
+                <li class="page_item page-item-849"><a href="http://puppetlabs.com/category/events/upcoming/" title="Events &amp; Public Training">Events &amp; Public Training</a></li>
+                <li class="page_item page-item-851"><a href="http://puppetlabs.com/services/partners/" title="Partners">Partners</a></li>
+                <li class="page_item page-item-1037"><a href="http://puppetlabs.com/resources/customer-support" title="Customer Support">Customer Support</a></li>
+              </ul>
+            </li>
+            <li id="resources-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/resources/">
+                <span>Resources</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-1048"><a href="http://puppetlabs.com/resources/overview-2/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-1040"><a href="http://docs.puppetlabs.com" title="Documentation">Documentation</a></li>
+                <li class="page_item page-item-872"><a href="http://puppetlabs.com/resources/downloads/" title="Downloads">Downloads</a></li>
+                <li class="page_item page-item-835"><a href="http://puppetlabs.com/resources/white-papers/" title="White Papers">White Papers</a></li>
+                <li class="page_item page-item-833"><a href="http://puppetlabs.com/resources/case-studies/" title="Case Studies">Case Studies</a></li>
+                <li class="page_item page-item-1052"><a href="http://puppetlabs.com/resources/customer-support/" title="Customer Support">Customer Support</a></li>
+              </ul>
+
+            </li>
+            <li id="community-tab">
+              <a href="http://puppetlabs.com/community/">
+                <span>Community</span>
+              </a>
+            </li>
+
+            <li id="company-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/company/">
+                <span>Company</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li><a href="http://puppetlabs.com/company/">About Us</a></li>
+                <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+              </ul>
+            </li>
+      		</ul>	   
+          <div id="misc-navigation">
+			<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+			  <ul>
+				<li><a href="http://docs.puppetlabs.com">Documentation</a></li>
+				<li><a href="http://puppetlabs.com/resources/customer-support/">Support</a></li>
+				<li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+				<li><a href="http://puppetlabs.com/resources/downloads" class="gateway">Download</a></li>
+			  </ul>
+			<form action="http://www.google.com/cse" id="cse-search-box">
+			  <div>
+				<input type="hidden" name="cx" value="017884045025332504017:1mnj-dlgfcc" />
+				<input type="hidden" name="ie" value="UTF-8" />
+				<input type="text" name="q" size="31" />
+				<input type="submit" name="sa" class="searchbtn" value="Search" />
+			  </div>
+			</form>
+			<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+		  </div>
+        </nav>
+    	</div>
+    </header>  
+
+      <section id="masthead">
+        <div class="site-width">
+          <h1>Docs: <span class="section-name">The Puppet File Server</span></h1>
+          <ul id="doc-navigation">
+            <li><a href="/">Docs Home</a></li>
+            <li class="with-submenu">
+              <a href="#">
+                <span>Quick Nav</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+               <!-- the following links can't be relative, unfortunately -->
+               <!-- future: add some JS to disable this if running from file:// -->
+	            <dl>
+	              <dt>Guides</dt>
+	              <dd><a href="/index.html">Index</a></dd>
+                      <dt>Resource Types</dt>
+	              <dd><a href="/guides/types/">By Category</a></dd>
+	              <dd><a href="/guides/types/alphabetical_index.html">Alphabetical</a></dd>
+	              <dt>References</dt>
+                      <dd><a href="/references/2.6.0/">2.6.0</a></dd> 
+                      <dd><a href="/references/0.25.5/">0.25.5</a></dd> 
+	              <dd><a href="/references/0.25.0/">0.25.0</a></dd>
+	              <dd><a href="/references/0.24.8/">0.24.8</a></dd>
+	              <dd><a href="/references/">Other Versions</a></dd>
+	            </dl>
+            </li>
+            <li><a href="/contribute.html">Contribute</a></li>
+          </ul>
+        </div>
+      </section>
+    
+      <section id="content">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <h1 id='the_puppet_file_server'>The Puppet File Server</h1>
+
+<p>Learn how to use Puppet&#8217;s file serving capability.</p>
+              <p>Puppet comes with both a client and server for copying files around. The file serving function is provided as part of the central Puppet daemon, puppetmasterd, and the client function is used through the source attribute of file objects:</p>
+
+<pre><code># copy a remote file to /etc/sudoers
+file { &quot;/etc/sudoers&quot;:
+    mode =&gt; 440,
+    owner =&gt; root,
+    group =&gt; root,
+    source =&gt; &quot;puppet://server/modules/module_name/sudoers&quot;
+}</code></pre>
+
+<p>As the example implies, Puppet&#8217;s fileserving function abstracts local filesystem topology by supporting fileservice &#8220;modules&#8221;.</p>
+
+<p>In release 0.25.0 and later you must specify your source statements in the format:</p>
+
+<pre><code>source =&gt; &quot;puppet://server/modules/module_name/file&quot;</code></pre>
+
+<p>Note the addition of the &#8220;modules&#8221; statement which differs from the earlier 0.24.x releases.</p>
+
+<p>Specifying a path to serve and a name for the path, clients may request by name instead of by path. This provides the ability to conceal from the client unnecessary details like the local filesystem configuration.</p>
+
+<h2 id='file_format'>File Format</h2>
+
+<p>The default location for the file service is /etc/puppet/fileserver.conf; this can be changed using the &#8211;fsconfig flag to puppetmasterd. The format of the file is almost exactly like that of <a href='http://samba.anu.edu.au/rsync/'>rsync</a>, although it does not yet support the full functionality of rsync. The configuration file resembles INI files, but it is not exactly the same:</p>
+
+<pre><code>[module]
+    path /path/to/files
+    allow *.domain.com
+    deny *.wireless.domain.com</code></pre>
+
+<p>These three options represent the only options currently available in the configuration file. The module name, somewhat obviously, goes in the brackets. The path is the only required option. The default security configuration is to deny all access, so if no allow lines are specified, the module will be configured but available to no one.</p>
+
+<p>The path can contain any or all of %h, %H, and %d, which are dynamically replaced by the client&#8217;s hostname, its fully qualified domain name and it&#8217;s domain name, respectively. All are taken from the client&#8217;s SSL certificate (so be careful if you&#8217;ve got hostname/certname mismatches). This is useful in creating modules where files for each client are kept completely separately, e.g. for private ssh host keys. For example, with the configuration</p>
+
+<pre><code>[private]
+    path /data/private/%h
+    allow *</code></pre>
+
+<p>the request for file /private/file.txt from client client1.example.com will look for a file /data/private/client1/file.txt, while the same request from client2.example.com will try to retrieve the file /data/private/client2/file.txt on the fileserver.</p>
+
+<p>Currently paths cannot contain trailing slashes or an error will result. Also take care that in puppet.conf you are not specifying directory locations that have trailing slashes.</p>
+
+<h2 id='security'>Security</h2>
+
+<p>There are two aspects to securing the Puppet file server: allowing specific access, and denying specific access. By default no access is allowed. There are three ways to specify a class of clients who are allowed or denied access: by IP address, by name, or a global allow using *.</p>
+
+<p>If clients are not connecting to the Puppet file server directly, eg. using a reverse proxy and Mongrel (see <span><span>Using Mongrel</span></span> ), then the file server will see all the connections as coming from the proxy server and not the Puppet client. In this case it is probably best to restrict access based on the hostname, as explained above. Also in this case you will need to allow access to machine(s) acting as reverse proxy, usually 127.0.0.0/8.</p>
+
+<h3 id='priority'>Priority</h3>
+
+<p>All deny statements are parsed before all allow statements, so if any deny statements match a host, then that host will be denied, and if no allow statements match a host, it will be denied.</p>
+
+<h3 id='host_names'>Host Names</h3>
+
+<p>Host names can be specified using either a complete hostname, or specifying an entire domain using the * wildcard:</p>
+
+<pre><code>[export]
+    path /export
+    allow host.domain1.com
+    allow *.domain2.com
+    deny badhost.domain2.com</code></pre>
+
+<h3 id='ip_addresses'>IP Addresses</h3>
+
+<p>IP address can be specified similarly to host names, using either complete IP addresses or wildcarded addresses. You can also use CIDR-style notation:</p>
+
+<pre><code>[export]
+    path /export
+    allow 127.0.0.1
+    allow 192.168.0.*
+    allow 192.168.1.0/24</code></pre>
+
+<h3 id='global_allow'>Global allow</h3>
+
+<p>Specifying a single wildcard will let anyone into a module:</p>
+
+<pre><code>[export]
+    path /export
+    allow *</code></pre>
+            </div>
+            <div class="secondary-content">
+                    <div id="subCol">
+        <h3 class="chapter">Contents</h3>
+        <ol class="chapters">
+<li><a href="#file_format">File Format</a></li>
+<li>
+<a href="#security">Security</a><ul style="list-style: none;">
+<li><a href="#priority">Priority</a></li>
+<li><a href="#host_names">Host Names</a></li>
+<li><a href="#ip_addresses">IP Addresses</a></li>
+<li><a href="#global_allow">Global allow</a></li>
+</ul>
+</li></ol></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+		<footer id="footer">
+      <div class="site-width">
+        <div class="primary-secondary-content">
+          <div class="primary-content">
+            <section id="newsletter">
+                 <h4>Puppet Labs is Hiring</h4>
+                 <p><a href="http://www.puppetlabs.com/company/jobs/">Engineers, developers & consultants</a>
+                  <p>  
+		<h4>Newsletter</h4>
+              <p>Stay up to date on all things puppet</p>
+              <form action="http://lfov.net/webrecorder/f" method="post" name="Newsletter" id="footerform">
+                <input type="hidden" name="formid" value="3d424fd0-4204-435f-afde-aa1c4a6bc2f1"/>
+                <input type="hidden" name="cid" value="LF_c268993e"/>
+                <fieldset>
+                  <legend>Newsletter</legend>
+                  <label form="email">Email</label>
+                  <input type="text" name="email" id="email" class="required email" />
+                  <button type="submit">Subscribe</button>
+                </fieldset>
+              </form>
+
+            </section>
+            <section id="elsewhere">
+              <h4>Get Involved</h4>
+              <ul>
+                <li class="chat"><a href="http://webchat.freenode.net/?channels=puppet" rel="external"><span class="indicator"></span><span>Chat with us on IRC</span></a></li>
+                <li class="discussion"><a href="http://groups.google.com/group/puppet-users?pli=1" rel="external"><span class="indicator"></span><span>Join the Mailing List</span></a></li>
+                
+                <li class="linkedin"><a href="http://www.linkedin.com/groups?about=&gid=696467&trk=anet_ug_grppro" rel="external"><span class="indicator"></span><span>Join the Puppet Users LinkedIn group</span></a></li>
+
+		
+
+              </ul>
+            </section>
+          </div>
+          <div class="secondary-content">
+            <section id="book-it">
+              <h4>Get the book!</h4>
+              <p>Written by James Turnbull, <a href="http://apress.com/book/view/1590599780" rel="nofollow">Pulling Strings with Puppet</a> is the first book to introduce the powerful Puppet system administration tool. </p>
+              <a href="http://apress.com/book/view/1590599780" rel="nofollow"><img src="http://puppetlabs.com/images/book.png" /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+		</footer>
+
+    <div id="copyright">
+      <div class="site-width">
+        &copy; <?= date('Y'); ?> <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
+        <span class="vcard">
+         <span class="org"></span>
+         <a class="email" href="mailto:info@puppetlabs.com">info@puppetlabs.com</a>
+          <span class="adr">
+           <span class="street-address">222 NW Davis Street</span>
+           /
+           <span class="locality">Portland</span>, 
+           <span class="region">OR</span>
+           <span class="postal-code">97209</span>
+
+          </span>
+         <span class="tel">1-877-575-9775</span>
+        </span>          
+      </div>
+    </div>
+    <script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script> <script>mktoMunchkin("307-QLA-991");</script> 
+    <!-- BEGIN: LOOPFUSE TRACKING -->
+    <script src="http://lfov.net/webrecorder/js/listen.js" type="text/Javascript"></script>
+    <script type="text/Javascript">
+    _lf_cid = "LF_c268993e";
+    _lf_remora();
+    </script>
+    <!-- END: LOOPFUSE TRACKING -->
+    
+  	<script type="text/javascript">Cufon.now();</script>
+  	<style type="text/css">h1, h2, .btn { visibility : visible; }</style>
+
+	</body>
+</html>        
